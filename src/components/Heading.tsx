@@ -1,15 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-interface propsType {
-    title: string;
+interface PropsType {
+  title: string;
 }
 
-const heading:React.FC<propsType> = ({title}) => {
+const Heading: React.FC<PropsType> = ({ title }) => {
   return (
-    <div className='text-center text-4xl pb-8'>
-      <p className='border-b-4 inline-lock pb-2'>{title}</p>
+    <div className="text-center pb-8">
+      {/* Use different font sizes based on screen size */}
+      <p className="border-b-4 inline-block pb-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+        {title}
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default heading
+export default Heading;

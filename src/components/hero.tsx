@@ -5,21 +5,39 @@ const Hero = () => {
   return (
     <div 
       id="hero"
-      className="min-h-screen bg-no-repeat bg-cover"
+      className="min-h-screen bg-no-repeat bg-cover flex flex-col justify-center"
       style={{ 
         backgroundImage: "url('/bg.png')", 
         backgroundSize: "20%",
-        backgroundPosition: "left 165px top 135px" // 2.5 inch from the left, centered vertically
+        backgroundPosition: "left 250px top 110px" // Adjusted for small screens
       }}
     >
       <Navbar />
-      <div className='container grid lg:grid-cols-2 h-[calc(100vh-60px)]'>
-        <div className='hidden lg:block'></div>
-        <div className='text-[100px] sm:text-[90px] font-bold leading-tight flex justify-center items-center'>
-          <div>
-            <p data-aos="zoom-in-up" className="text-yellow-500">I&apos;m</p> {/* Changed color to yellow */}
-            <p data-aos="zoom-in-up">Jalal</p>
-            <p data-aos="zoom-in-up">uddin</p>
+      <div className="container flex flex-col lg:flex-row items-center justify-center h-[calc(100vh-60px)] lg:justify-between px-4">
+        {/* Background image container for small screens */}
+        <div className="lg:flex-1"></div>
+        {/* Text content with additional top margin for small screens */}
+        <div className="flex flex-col items-center lg:items-start mt-8 lg:mt-0 lg:flex-1 mb-12 sm:mb-16 mt-[450px] lg:mt-0 lg:ml-[190px]">
+          <div className="text-center lg:text-left">
+            {/* Responsive text placement */}
+            <p 
+              data-aos="zoom-in-up" 
+              className="text-yellow-500 text-3xl sm:text-4xl md:text-5xl lg:text-[100px] xl:text-[80px] font-bold leading-tight mb-3 sm:mb-5"
+            >
+              I&apos;m
+            </p>
+            <p 
+              data-aos="zoom-in-up" 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[100px] xl:text-[80px] font-bold leading-tight mb-3 sm:mb-5"
+            >
+              Jalal
+            </p>
+            <p 
+              data-aos="zoom-in-up" 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[100px] xl:text-[80px] font-bold leading-tight mb-3 sm:mb-5"
+            >
+              uddin
+            </p>
           </div>
         </div>
       </div>
@@ -28,6 +46,3 @@ const Hero = () => {
 }
 
 export default Hero;
-
-
-
