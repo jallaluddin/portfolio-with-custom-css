@@ -34,7 +34,7 @@ const Contact = () => {
             <label htmlFor="msg">Message</label>
             <textarea 
             className='bg transparent border border-accent text-black'
-            id='msg' rows={8}>
+            id='message' rows={8}>
             </textarea>
           </div>
           <button className='bg-accent p-2 px-6'data-aos="zoom-in-up">Send</button>

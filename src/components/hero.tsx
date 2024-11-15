@@ -17,7 +17,7 @@ const Hero = () => {
         <div className='hidden lg:block'></div>
         <div className='text-[100px] sm:text-[90px] font-bold leading-tight flex justify-center items-center'>
           <div>
-            <p data-aos="zoom-in-up" className="text-yellow-500">I'm</p> {/* Changed color to yellow */}
+            <p data-aos="zoom-in-up" className="text-yellow-500">I&apos;m</p> {/* Changed color to yellow */}
             <p data-aos="zoom-in-up">Jalal</p>
             <p data-aos="zoom-in-up">uddin</p>
           </div>
