@@ -1,0 +1,29 @@
+/* about.css */
+
+/* Container for the About section */
+.about-container {
+  padding-top: 8rem; /* Equivalent to Tailwind's pt-32 */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+/* About Me Title */
+.about-title {
+  font-size: 2.25rem; /* Tailwind's text-4xl */
+  font-size: 3rem;    /* Tailwind's text-5xl for medium screens and up */
+  color: orangered;        /* Change this to the color you prefer */
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* About Me Text */
+.about-text {
+  color: white;     /* Equivalent to Tailwind's text-grey-500 */
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.75;
+}

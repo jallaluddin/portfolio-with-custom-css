@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import '../app/styles/hero.css'; // Adjusted path to two levels up
+
 
 const Hero = () => {
   // State to handle menu toggle
@@ -13,7 +15,7 @@ const Hero = () => {
   return (
     <div 
       id="hero"
-      className="relative min-h-screen bg-no-repeat bg-cover flex flex-col justify-center"
+      className="hero-container"
       style={{ 
         backgroundImage: "url('/bg.png')", 
         backgroundSize: "20%",
@@ -21,59 +23,40 @@ const Hero = () => {
       }}
     >
       {/* Navbar with Toggle Button */}
-      <div className="relative">
+      <div className="navbar-container">
         <Navbar />
         {/* Toggle button always in the top-right corner */}
-        <div className="absolute top-4 right-4 lg:hidden">
-          <button onClick={toggleMenu} className="text-3xl">
+        <div className="menu-toggle-button">
+          <button onClick={toggleMenu} className="menu-icon">
             {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
           </button>
         </div>
       </div>
 
-      <div className="container flex flex-col lg:flex-row items-center justify-center h-[calc(100vh-60px)] lg:justify-between px-4">
+      <div className="hero-content">
         {/* Background image container for small screens */}
-        <div className="lg:flex-1"></div>
-        {/* Text content with additional top margin for small screens */}
-        <div className="flex flex-col items-center lg:items-start mt-8 lg:mt-0 lg:flex-1 mb-12 sm:mb-16 mt-[450px] lg:mt-0 lg:ml-[190px]">
-          <div className="text-center lg:text-left">
-            {/* Responsive text placement */}
-            <p 
-              data-aos="zoom-in-up" 
-              className="text-yellow-500 text-6xl sm:text-4xl md:text-5xl lg:text-[100px] xl:text-[80px] font-bold leading-tight mb-3 sm:mb-5"
-            >
-              I&apos;m
-            </p>
-            <p 
-              data-aos="zoom-in-up" 
-              className="text-6xl sm:text-4xl md:text-5xl lg:text-[100px] xl:text-[80px] font-bold leading-tight mb-3 sm:mb-5"
-            >
-              Jalal
-            </p>
-            <p 
-              data-aos="zoom-in-up" 
-              className="text-6xl sm:text-4xl md:text-5xl lg:text-[100px] xl:text-[80px] font-bold leading-tight mb-3 sm:mb-5"
-            >
-              Uddin
-            </p>
+        <div className="image-container"></div>
+        {/* Text content */}
+        <div className="text-container">
+          <div className="text-content">
+            <p data-aos="zoom-in-up" className="intro-text">I&apos;m</p>
+            <p data-aos="zoom-in-up" className="name-text">Jalal</p>
+            <p data-aos="zoom-in-up" className="name-text">Uddin</p>
           </div>
         </div>
       </div>
 
       {/* Responsive Menu for small screens */}
       {isMenuOpen && (
-        <div 
-          className="absolute bg-gray-800 p-4 z-10 rounded-lg shadow-lg"
-          style={{ top: 'calc(2vh / 2)', right: '9px' }} // Adjust top and left to position under "Jalal"
-        >
+        <div className="responsive-menu">
           {/* Close button inside the menu */}
-          <div className="flex justify-end">
-            <button onClick={toggleMenu} className="text-3xl mb-4 text-white">
+          <div className="menu-close-button">
+            <button onClick={toggleMenu} className="close-icon">
               <AiOutlineClose />
             </button>
           </div>
-          {/* Menu Items displayed under "Jalal" */}
-          <ul className="text-white space-y-4">
+          {/* Menu Items */}
+          <ul className="menu-items">
             <li>Home</li>
             <li>About</li>
             <li>Services</li>

@@ -1,48 +1,50 @@
 import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import '../app/styles/navbar.css';
 
 const Navbar = () => {
-  // State to handle mobile menu visibility
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Function to toggle mobile menu visibility
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <div className='container pt-7 flex justify-between items-center'>
-      {/* Left Side: Jalal */}
-      <div className='text-xl font-medium'>Jalal</div>
-      
-      {/* Right Side: Navigation Links (for larger screens) */}
-      <ul className='gap-10 lg:gap-50 hidden md:flex'>
-        <li className='menuLink'><a href='#hero'>Home</a></li>
-        <li className='menuLink'><a href='#about'>About</a></li>
-        <li className='menuLink'><a href='#projects'>Projects</a></li>
-        <li className='menuLink'><a href='#skills'>Skills</a></li>
-        <li className='menuLink'><a href='#contact'>Contact</a></li>
-      </ul>
-      
-      {/* Menu Icon for Mobile (only visible on small screens) */}
-      <div className='md:hidden' onClick={toggleMobileMenu}>
-        {isMobileMenuOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
+    <div className="navbar-container">
+      {/* Navbar content (brand and menu icon) */}
+      <div className="navbar-content">
+        {/* Brand (Jalal Uddin) */}
+        <div className="navbar-brand yellow-text">Jalal</div>
+
+        {/* Menu Icon for Mobile */}
+        <div className="menu-icon" onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        </div>
       </div>
+
+      {/* Navigation Links (for larger screens) */}
+      <ul className="navbar-links">
+        <li className="menuLink"><a href="#hero">Home</a></li>
+        <li className="menuLink"><a href="#about">About</a></li>
+        <li className="menuLink"><a href="#projects">Projects</a></li>
+        <li className="menuLink"><a href="#skills">Skills</a></li>
+        <li className="menuLink"><a href="#contact">Contact</a></li>
+      </ul>
 
       {/* Mobile Menu (only visible when isMobileMenuOpen is true) */}
       {isMobileMenuOpen && (
-        <div className='absolute top-0 left-0 w-full h-screen bg-black bg-opacity-90 flex flex-col justify-center items-center text-white md:hidden'>
-          <ul className='space-y-8 text-2xl'>
-            <li className='menuLink'><a href='#hero' onClick={toggleMobileMenu}>Home</a></li>
-            <li className='menuLink'><a href='#about' onClick={toggleMobileMenu}>About</a></li>
-            <li className='menuLink'><a href='#projects' onClick={toggleMobileMenu}>Projects</a></li>
-            <li className='menuLink'><a href='#skills' onClick={toggleMobileMenu}>Skills</a></li>
-            <li className='menuLink'><a href='#contact' onClick={toggleMobileMenu}>Contact</a></li>
+        <div className="mobile-menu">
+          <ul className="mobile-links">
+            <li className="menuLink"><a href="#hero" onClick={toggleMobileMenu}>Home</a></li>
+            <li className="menuLink"><a href="#about" onClick={toggleMobileMenu}>About</a></li>
+            <li className="menuLink"><a href="#projects" onClick={toggleMobileMenu}>Projects</a></li>
+            <li className="menuLink"><a href="#skills" onClick={toggleMobileMenu}>Skills</a></li>
+            <li className="menuLink"><a href="#contact" onClick={toggleMobileMenu}>Contact</a></li>
           </ul>
         </div>
       )}
     </div>
   );
-}
+};
 
 export default Navbar;

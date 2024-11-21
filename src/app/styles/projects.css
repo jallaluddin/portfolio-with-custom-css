@@ -1,0 +1,85 @@
+/* projects.css */
+
+/* Container for the entire section */
+.projects-container {
+    padding-top: 8rem; /* Equivalent to pt-32 */
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* Grid for the project cards */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Card style for individual projects */
+  .project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+  
+  /* Container for the project image */
+  .project-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Image style */
+  .project-image {
+    border-radius: 8px;
+  }
+  
+  /* Info section for the project card */
+  .project-info {
+    background-color: #000;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-desc {
+    color: #d1d5db; /* Equivalent to text-gray-300 */
+    margin-bottom: 1rem;
+  }
+  
+  /* Tag styling */
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tag {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+  }
+  

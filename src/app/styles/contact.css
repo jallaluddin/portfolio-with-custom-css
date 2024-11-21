@@ -1,0 +1,93 @@
+/* contact.css */
+
+/* Main container for the contact section */
+.contact-container {
+    padding-top: 8rem; /* Similar to Tailwind's pt-32 */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Grid layout for contact info and form */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem; /* Similar to Tailwind's gap-10 */
+  }
+  
+  @media (min-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1fr; /* Two-column layout for medium screens and above */
+    }
+  }
+  
+  /* Contact info section */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Title style */
+  .contact-title {
+    font-size: 3rem; /* Similar to Tailwind's text-5xl */
+    margin-bottom: 1rem;
+  }
+  
+  /* Description text */
+  .contact-description {
+    color: #4B5563; /* Tailwind's text-gray-600 */
+    font-size: 1.125rem; /* 18px */
+    padding-top: 0.5rem;
+  }
+  
+  /* Email and phone item styles */
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+  }
+  
+  /* Contact form section */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  /* Form input styling */
+  .form-input, .form-textarea {
+    height: 2.5rem; /* 40px */
+    background-color: transparent;
+    border: 1px solid #ff6a3d; /* Accent color */
+    padding: 0.5rem;
+    color: #000;
+  }
+  
+  /* Form textarea specific styling */
+  .form-textarea {
+    height: auto;
+  }
+  
+  /* Button styling */
+  .contact-button {
+    background-color: #ff6a3d; /* Accent color */
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #e25831; /* Slightly darker shade for hover */
+  }
+  

@@ -1,0 +1,16 @@
+/* footer.css */
+
+/* Footer container styling */
+.footer-container {
+    margin-top: 7.5rem; /* Similar to Tailwind's mt-30 */
+    padding: 1.5rem 0;   /* Similar to Tailwind's py-6 */
+    text-align: center;  /* Center the content */
+    background-color: #ff6a3d; /* Replace with your chosen accent color */
+  }
+  
+  /* Footer text styling */
+  .footer-text {
+    color: #7f1d1d; /* Similar to Tailwind's text-red-950 */
+    font-size: 1rem; /* Adjust the font size as needed */
+  }
+  

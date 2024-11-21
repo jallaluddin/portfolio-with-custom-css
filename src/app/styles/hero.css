@@ -1,0 +1,137 @@
+/* hero.css */
+
+/* Hero container styling */
+.hero-container {
+  position: relative;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Navbar container styling */
+.navbar-container {
+  position: relative;
+}
+
+/* Menu toggle button styling */
+.menu-toggle-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+}
+
+/* Menu icon styling */
+.menu-icon {
+  font-size: 2rem;
+}
+
+/* Show the menu toggle button on smaller screens */
+@media (max-width: 1024px) {
+  .menu-toggle-button {
+    display: block;
+  }
+}
+
+/* Hero content styling */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 40px);
+  padding: 0 2rem; /* Reduce padding for smaller screens */
+}
+
+@media (min-width: 1024px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 8rem; /* Restore padding for larger screens */
+  }
+}
+
+/* Text content styling */
+.text-container {
+  margin-top: 0; /* Remove large top margin for mobile */
+  margin-bottom: 2rem; /* Adjust as needed */
+}
+
+.text-content {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .text-content {
+    text-align: left;
+    margin-left: 2rem; /* Similar to Tailwind's lg:ml-[190px] */
+  }
+}
+
+/* Text styling */
+.intro-text, .name-text {
+  font-size: 2rem; /* Smaller default size for mobile */
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem; /* Default gap */
+}
+
+/* Adjust font sizes for responsiveness */
+@media (min-width: 640px) {
+  .intro-text, .name-text {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem; /* Slightly larger gap for medium screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .intro-text, .name-text {
+    font-size: 3rem;
+    margin-bottom: 2rem; /* Slightly larger gap */
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro-text, .name-text {
+    font-size: 6rem;
+    margin-bottom: 2rem; /* Adjust gap for larger screens */
+  }
+}
+
+/* Responsive menu for small screens */
+.responsive-menu {
+  position: absolute;
+  background-color: #333;
+  padding: 1rem;
+  z-index: 10;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  top: 2vh;
+  right: 10px;
+}
+
+/* Close button inside the menu */
+.menu-close-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* Menu items */
+.menu-items {
+  list-style: none;
+  padding: 0;
+  color: white;
+}
+
+.menu-items li {
+  margin-bottom: 1rem;
+}

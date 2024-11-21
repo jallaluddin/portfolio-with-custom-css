@@ -1,0 +1,36 @@
+/* heading.css */
+
+/* Container for the heading */
+.heading-container {
+    text-align: center;
+    padding-bottom: 2rem; /* Similar to Tailwind's pb-8 */
+  }
+  
+  /* Heading text styles with responsive font sizes */
+  .heading-text {
+    display: inline-block;
+    padding-bottom: 0.5rem; /* Similar to Tailwind's pb-2 */
+    border-bottom: 4px solid #000; /* Create a bottom border */
+    font-size: 1.5rem; /* Default size similar to Tailwind's text-2xl */
+    font-weight: 600; /* Optional: Adjust font weight if needed */
+  }
+  
+  /* Responsive font sizes */
+  @media (min-width: 640px) { /* Similar to Tailwind's sm: */
+    .heading-text {
+      font-size: 1.875rem; /* Similar to Tailwind's text-3xl */
+    }
+  }
+  
+  @media (min-width: 768px) { /* Similar to Tailwind's md: */
+    .heading-text {
+      font-size: 2.25rem; /* Similar to Tailwind's text-4xl */
+    }
+  }
+  
+  @media (min-width: 1024px) { /* Similar to Tailwind's lg: */
+    .heading-text {
+      font-size: 3rem; /* Similar to Tailwind's text-5xl */
+    }
+  }
+  

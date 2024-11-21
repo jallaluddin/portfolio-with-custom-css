@@ -1,0 +1,72 @@
+/* skills.css */
+
+/* Container for the entire Skills section */
+.skills-container {
+    padding-top: 8rem; /* Equivalent to pt-32 */
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* Heading for the Skills section */
+  .skills-heading {
+    font-size: 3rem; /* Equivalent to text-5xl */
+    font-weight: 700; /* Equivalent to font-bold */
+    text-align: center;
+    margin-bottom: 3rem; /* Equivalent to mb-12 */
+  }
+  
+  /* Grid layout for the skills section */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Subheading style for "Tech Stack and Expertise" */
+  .skills-subheading {
+    font-size: 2.25rem; /* Equivalent to text-4xl */
+    font-weight: 600; /* Slightly less bold than heading */
+  }
+  
+  /* Description for the skills section */
+  .skills-description {
+    color: #6b7280; /* Equivalent to text-gray-500 */
+    margin-top: 1rem;
+  }
+  
+  /* Grid for the list of skills */
+  .skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    font-size: 2rem; /* Equivalent to text-3xl */
+    color: #1c64f2; /* Equivalent to text-accent */
+  }
+  
+  @media (min-width: 640px) {
+    .skills-list {
+      font-size: 2.25rem; /* Equivalent to text-4xl on sm screens */
+    }
+  }
+  
+  /* Column for each set of skills */
+  .skills-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Style for each skill in the list */
+  .skills-column h2 {
+    font-size: 2rem; /* Equivalent to text-3xl */
+    color: #1c64f2; /* Accent color */
+    font-weight: 500;
+  }
+  

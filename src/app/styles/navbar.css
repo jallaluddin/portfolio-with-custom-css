@@ -1,0 +1,104 @@
+/* navbar.css */
+
+/* Container for the entire navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Space between brand and links */
+  align-items: center;
+  padding: 1rem 20rem;
+  background-color: #333; /* Example background color */
+  color: #fff; /* Example text color */
+  
+}
+
+/* Navbar content (brand and menu icon) */
+.navbar-content {
+  display: flex;
+  align-items: center;
+}
+
+/* Brand styling */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFD700; /* Yellow color for Jalal */
+  margin-right: auto; /* Keeps the brand to the left */
+  margin-left: -36rem; /* Slightly move to the left */
+}
+
+/* Menu icon styling */
+.menu-icon {
+  cursor: pointer;
+  display: none; /* Hidden on larger screens */
+}
+
+/* Navigation links for larger screens */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 1rem;
+  right: -10rem; /* Align to the right */
+}
+
+/* Link styles */
+.menuLink a {
+  color: #fff; /* White text color */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menuLink a:hover {
+  color: #FFD700; /* Hover color to match the brand */
+}
+
+/* Mobile menu styling */
+.mobile-menu {
+  position: absolute;
+  top: 4rem; /* Below the navbar */
+  right: auto;
+  background-color: #333; /* Same background as the navbar */
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  right: 5rem;
+  left: -10rem;
+}
+
+/* Mobile links */
+.mobile-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-links .menuLink {
+  margin-bottom: 1rem;
+}
+
+.mobile-links .menuLink a {
+  color: #fff; /* White text color */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.mobile-links .menuLink a:hover {
+  color: #FFD700; /* Hover color to match the brand */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hide on smaller screens */
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon on smaller screens */
+  }
+}

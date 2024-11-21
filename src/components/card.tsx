@@ -1,36 +1,40 @@
-import React from 'react'
+import React from 'react';
 import Image from 'next/image';
-interface propsType {
-    title: string;
-    desc: string;
-    image: string;
-    tags: string[];
+import '../app/styles/card.css';
+
+interface PropsType {
+  title: string;
+  desc: string;
+  image: string;
+  tags: string[];
 }
-const card:React.FC<propsType> = ({title, desc, image, tags}) => {
+
+const Card: React.FC<PropsType> = ({ title, desc, image, tags }) => {
   return (
-    <div className='border border-accent w-[300px] sm:w[350px]'data-aos="zoom-in-up">
-      <div>
-        <Image className='w-[300px] sm:w[350px] h-auto'
-        src={image}
-        width={350}
-        height={350}
-        alt={title}
+    <div className='card-container' data-aos="zoom-in-up">
+      <div className='card-image-wrapper'>
+        <Image
+          className='card-image'
+          src={image}
+          width={350}
+          height={350}
+          alt={title}
         />
       </div>
 
-       <div className='p-4 space-y-4'>
-        <div className='text-4xl font-extralight'>{title}</div>
-        <div>{desc}</div>
-          <div>
-            {tags.map((el)=> (
-                <div className='tags' key={el}>
-                  {el}
-                </div>))}
-          </div>
-       </div>
-
+      <div className='card-content'>
+        <div className='card-title'>{title}</div>
+        <div className='card-description'>{desc}</div>
+        <div className='card-tags'>
+          {tags.map((el) => (
+            <div className='tag-item' key={el}>
+              {el}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default card
+export default Card;

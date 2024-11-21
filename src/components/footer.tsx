@@ -1,11 +1,12 @@
 import React from 'react';
+import '../app/styles/footer.css';
 
 const Footer = () => {
   return (
-    <div className='mt-30 py-6 text-center bg-accent'>
-      <span className= 'text-red-950'>© Jalal | All rights reserved 2024.</span>
+    <div className='footer-container'>
+      <span className='footer-text'>© Jalal | All rights reserved 2024.</span>
     </div>
   );
-}
+};
 
 export default Footer;

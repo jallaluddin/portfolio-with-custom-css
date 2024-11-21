@@ -1,7 +1,7 @@
 import React from 'react';
 import Heading from './Heading';
 import Image from 'next/image'; // Import Image from next/image
-
+import '../app/styles/projects.css';
 const data = [
   {
     id: 0,
@@ -42,30 +42,30 @@ const data = [
 
 const Projects = () => {
   return (
-    <div id='projects' className='container pt-32'>
+    <div id='projects' className='projects-container'>
       <Heading title="Projects" />
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+      <div className='projects-grid'>
         {data.map((project) => (
           <div
             key={project.id}
-            className='bg-white shadow-md rounded-md p-4'
+            className='project-card'
             data-aos="zoom-in-up"
           >
-            <div className='relative w-full h-48 mb-4'>
+            <div className='project-image-container'>
               <Image
                 src={project.image}
                 alt={project.title}
                 layout="fill" // Adjusts the image to cover the container
                 objectFit="cover" // Ensures image covers the space properly
-                className='rounded-md'
+                className='project-image'
               />
             </div>
-            <div className='bg-black p-4 rounded-md'>
-              <h3 className='text-lg font-semibold text-white'>{project.title}</h3>
-              <p className='text-gray-300'>{project.desc}</p>
-              <div className="flex flex-wrap gap-2 mt-2">
+            <div className='project-info'>
+              <h3 className='project-title'>{project.title}</h3>
+              <p className='project-desc'>{project.desc}</p>
+              <div className="project-tags">
                 {project.tags.map((tag, index) => (
-                  <span key={index} className="tags">
+                  <span key={index} className="tag">
                     #{tag}
                   </span>
                 ))}
@@ -79,4 +79,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../app/styles/heading.css';
 
 interface PropsType {
   title: string;
@@ -6,9 +7,8 @@ interface PropsType {
 
 const Heading: React.FC<PropsType> = ({ title }) => {
   return (
-    <div className="text-center pb-8">
-      {/* Use different font sizes based on screen size */}
-      <p className="border-b-4 inline-block pb-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+    <div className="heading-container">
+      <p className="heading-text">
         {title}
       </p>
     </div>
